@@ -1,20 +1,23 @@
 version: 0.2
-
 phases:
-  install:
-    commands:
-      - echo Installing necessary tools...
   pre_build:
     commands:
-      - echo Preparing for build...
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $ECR_REPOSITORY_URI
+      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - IMAGE_TAG=${COMMIT_HASH:=latest}
   build:
     commands:
-      - echo Packaging source files into build.zip...
-      - zip -r build.zip ./*
+      - echo Building the Docker image...
+      - docker build -t $ECR_REPOSITORY_URI:$IMAGE_TAG .
+      - docker tag $ECR_REPOSITORY_URI:$IMAGE_TAG $ECR_REPOSITORY_URI:latest
   post_build:
     commands:
-      - echo Build process completed!
+      - echo Pushing the Docker image...
+      - docker push $ECR_REPOSITORY_URI:$IMAGE_TAG
+      - docker push $ECR_REPOSITORY_URI:latest
+      - echo Writing image definitions file...
+      - echo '[{"name":"'$CONTAINER_NAME'","imageUri":"'$ECR_REPOSITORY_URI:$IMAGE_TAG'"}]' > imagedefinitions.json
 artifacts:
   files:
-    - build.zip
-  discard-paths: yes
+    - imagedefinitions.json
