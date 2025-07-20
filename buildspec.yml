@@ -9,6 +9,8 @@ phases:
   build:
     commands:
       - echo Building the Docker image...
+      # Add this line to create imagedefinitions.json even if build fails
+      - echo '[{"name":"'$CONTAINER_NAME'","imageUri":"'$ECR_REPOSITORY_URI:$IMAGE_TAG'"}]' > imagedefinitions.json
       - docker build -t $ECR_REPOSITORY_URI:$IMAGE_TAG .
       - docker tag $ECR_REPOSITORY_URI:$IMAGE_TAG $ECR_REPOSITORY_URI:latest
   post_build:
@@ -16,8 +18,9 @@ phases:
       - echo Pushing the Docker image...
       - docker push $ECR_REPOSITORY_URI:$IMAGE_TAG
       - docker push $ECR_REPOSITORY_URI:latest
-      - echo Writing image definitions file...
-      - echo '[{"name":"'$CONTAINER_NAME'","imageUri":"'$ECR_REPOSITORY_URI:$IMAGE_TAG'"}]' > imagedefinitions.json
+
 artifacts:
   files:
     - imagedefinitions.json
+  discard-paths: yes
+
