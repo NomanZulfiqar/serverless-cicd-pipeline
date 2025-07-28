@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Analyzer - Future Ops Platform</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/code-analyzer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/x-icon" href="../../assets/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon-16x16.png">
+    <link rel="manifest" href="../../assets/images/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../assets/images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../../assets/images/android-chrome-512x512.png">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <img src="../../assets/images/logo.png" alt="Future Ops Logo" class="logo">
+    </div>
+    <ul class="navbar-links">
+      <li>
+        <a href="../../index.html" class="nav-link">
+          <div class="svg-wrapper-1">
+            <div class="svg-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" class="icon">
+                <path d="M22,15.04C22,17.23 20.24,19 18.07,19H5.93C3.76,19 2,17.23 2,15.04C2,13.07 3.43,11.44 5.31,11.14C5.28,11 5.27,10.86 5.27,10.71C5.27,9.33 6.38,8.2 7.76,8.2C8.37,8.2 8.94,8.43 9.37,8.8C10.14,7.05 11.13,5.44 13.91,5.44C17.28,5.44 18.87,8.06 18.87,10.83C18.87,10.94 18.87,11.06 18.86,11.17C20.65,11.54 22,13.13 22,15.04Z"></path>
+              </svg>
+            </div>
+          </div>
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="../index.html#features" class="nav-link">
+          <div class="svg-wrapper-1">
+            <div class="svg-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" class="icon">
+                <path d="M22,15.04C22,17.23 20.24,19 18.07,19H5.93C3.76,19 2,17.23 2,15.04C2,13.07 3.43,11.44 5.31,11.14C5.28,11 5.27,10.86 5.27,10.71C5.27,9.33 6.38,8.2 7.76,8.2C8.37,8.2 8.94,8.43 9.37,8.8C10.14,7.05 11.13,5.44 13.91,5.44C17.28,5.44 18.87,8.06 18.87,10.83C18.87,10.94 18.87,11.06 18.86,11.17C20.65,11.54 22,13.13 22,15.04Z"></path>
+              </svg>
+            </div>
+          </div>
+          <span>Features</span>
+        </a>
+      </li>
+      <li>
+        <a href="../index.html#about-us" class="nav-link">
+          <div class="svg-wrapper-1">
+            <div class="svg-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" class="icon">
+                <path d="M22,15.04C22,17.23 20.24,19 18.07,19H5.93C3.76,19 2,17.23 2,15.04C2,13.07 3.43,11.44 5.31,11.14C5.28,11 5.27,10.86 5.27,10.71C5.27,9.33 6.38,8.2 7.76,8.2C8.37,8.2 8.94,8.43 9.37,8.8C10.14,7.05 11.13,5.44 13.91,5.44C17.28,5.44 18.87,8.06 18.87,10.83C18.87,10.94 18.87,11.06 18.86,11.17C20.65,11.54 22,13.13 22,15.04Z"></path>
+              </svg>
+            </div>
+          </div>
+          <span>About Us</span>
+        </a>
+      </li>
+      <li>
+        <a href="../index.html#contact-us" class="nav-link">
+          <div class="svg-wrapper-1">
+            <div class="svg-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" class="icon">
+                <path d="M22,15.04C22,17.23 20.24,19 18.07,19H5.93C3.76,19 2,17.23 2,15.04C2,13.07 3.43,11.44 5.31,11.14C5.28,11 5.27,10.86 5.27,10.71C5.27,9.33 6.38,8.2 7.76,8.2C8.37,8.2 8.94,8.43 9.37,8.8C10.14,7.05 11.13,5.44 13.91,5.44C17.28,5.44 18.87,8.06 18.87,10.83C18.87,10.94 18.87,11.06 18.86,11.17C20.65,11.54 22,13.13 22,15.04Z"></path>
+              </svg>
+            </div>
+          </div>
+          <span>Contact</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+    <div class="bg-anim"></div>
+    <div class="bg-dots">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="bg-shapes">
+      <span class="square1"></span>
+      <span class="square2"></span>
+      <span class="triangle1"></span>
+      <span class="triangle2"></span>
+      <span class="square3"></span>
+      <span class="triangle3"></span>
+    </div>
+    <div class="bg-top-anim">
+      <span class="dot1"></span>
+      <span class="dot2"></span>
+      <span class="dot3"></span>
+    </div>
+    <div class="main-content">
+        <h1 class="animated"><i class="fab fa-github"></i> Code Quality Analyzer</h1>
+        <p style="font-size: 1.18rem; color: #fff; margin-bottom: 1.5em;">Set up professional pre-commit hooks for your GitHub repository using OpenAI's GPT-4 for intelligent code analysis and quality assurance.</p>
+
+        <!-- Download Section -->
+        <div class="download-section">
+            <h2 class="animated"><i class="fa fa-download"></i> Download Files</h2>
+            <div class="download-buttons">
+                <a href="pre-commit" download class="modern-download-btn">
+                  <button type="button">
+                    <div class="svg-wrapper-1">
+                      <div class="svg-wrapper">
+                        <!-- File icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" class="icon"><path d="M6 2C4.89 2 4 2.89 4 4V20C4 21.1 4.89 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2H6ZM13 9V3.5L18.5 9H13Z"/></svg>
+                      </div>
+                    </div>
+                    <span>pre-commit</span>
+                  </button>
+                </a>
+                <a href="scripts/pre_commit_hook.py" download class="modern-download-btn">
+                  <button type="button">
+                    <div class="svg-wrapper-1">
+                      <div class="svg-wrapper">
+                        <!-- Python icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" class="icon"><path d="M22,15.04C22,17.23 20.24,19 18.07,19H5.93C3.76,19 2,17.23 2,15.04C2,13.07 3.43,11.44 5.31,11.14C5.28,11 5.27,10.86 5.27,10.71C5.27,9.33 6.38,8.2 7.76,8.2C8.37,8.2 8.94,8.43 9.37,8.8C10.14,7.05 11.13,5.44 13.91,5.44C17.28,5.44 18.87,8.06 18.87,10.83C18.87,10.94 18.87,11.06 18.86,11.17C20.65,11.54 22,13.13 22,15.04Z"></path></svg>
+                      </div>
+                    </div>
+                    <span>pre_commit_hook.py</span>
+                  </button>
+                </a>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Instructions Section -->
+        <div class="instructions">
+            <h2 class="animated"><i class="fa fa-cogs"></i> Complete Setup Instructions</h2>
+            
+            <div class="setup-step">
+                <h3><i class="fa fa-check-circle"></i> Prerequisites</h3>
+                <ul>
+                    <li><strong>Git:</strong> Must be installed and configured on your system</li>
+                    <li><strong>Python 3.7+:</strong> Required for the hook script execution</li>
+                    <li><strong>Git Repository:</strong> Your project must be a Git repository (run <code>git init</code> if not)</li>
+                    <li><strong>Internet Connection:</strong> Required for code analysis features</li>
+                </ul>
+            </div>
+
+            <div class="setup-step">
+                <h3><i class="fa fa-download"></i> Step 1: Download Required Files</h3>
+                <p>Download both files using the buttons above:</p>
+                <ul>
+                    <li><code>pre-commit</code> - The main hook script</li>
+                    <li><code>pre_commit_hook.py</code> - The Python analysis script</li>
+                </ul>
+            </div>
+
+            <div class="setup-step">
+                <h3><i class="fa fa-folder-open"></i> Step 2: Prepare Your Repository</h3>
+                <p>Navigate to your Git repository's root directory:</p>
+                <div class="command-block">
+                    <code>cd /path/to/your/repository</code>
+                </div>
+                <p>Ensure you're in the correct directory by checking for the <code>.git</code> folder:</p>
+                <div class="command-block">
+                    <code>ls -la | grep .git</code>
+                </div>
+            </div>
+
+            <div class="setup-step">
+                <h3><i class="fa fa-copy"></i> Step 3: Install the Hook Files</h3>
+                <p>Move the downloaded files to your repository's <code>.git/hooks/</code> directory:</p>
+                
+                <h4>For Windows:</h4>
+                <div class="command-block">
+                    <code>copy pre-commit .git\hooks\</code><br>
+                    <code>copy pre_commit_hook.py .git\hooks\</code>
+                </div>
+                
+                <h4>For Mac/Linux:</h4>
+                <div class="command-block">
+                    <code>mv pre-commit .git/hooks/</code><br>
+                    <code>mv pre_commit_hook.py .git/hooks/</code>
+                </div>
+            </div>
+
+            <div class="setup-step">
+                <h3><i class="fa fa-key"></i> Step 4: Set File Permissions</h3>
+                <p>Make the hook files executable:</p>
+                
+                <h4>For Mac/Linux:</h4>
+                <div class="command-block">
+                    <code>chmod +x .git/hooks/pre-commit</code><br>
+                    <code>chmod +x .git/hooks/pre_commit_hook.py</code>
+                </div>
+            </div>
+
+            <div class="setup-step">
+                <h3><i class="fa fa-play"></i> Step 5: Test the Setup</h3>
+                <p>Verify the installation by making a test commit:</p>
+                <div class="command-block">
+                    <code>git add .</code><br>
+                    <code>git commit -m "Test: Verify pre-commit hook installation"</code>
+                </div>
+                <p>If successful, you should see analysis output in your terminal. If issues are found, the commit will be blocked until resolved.</p>
+            </div>
+
+            <div class="setup-step">
+                <h3><i class="fa fa-cog"></i> How It Works</h3>
+                <ul>
+                    <li><strong>Automatic Analysis:</strong> Every commit triggers code quality analysis</li>
+                    <li><strong>Quality Checks:</strong> Identifies potential bugs, security issues, and code improvements</li>
+                    <li><strong>Blocking Commits:</strong> Prevents commits with critical issues from being pushed</li>
+                    <li><strong>Detailed Feedback:</strong> Provides specific recommendations for code improvements</li>
+                </ul>
+            </div>
+
+            <div class="setup-step">
+                <h3><i class="fa fa-question-circle"></i> Troubleshooting</h3>
+                <ul>
+                    <li><strong>Hook Not Running:</strong> Check file permissions and ensure files are in <code>.git/hooks/</code></li>
+                    <li><strong>Python Errors:</strong> Verify Python 3.7+ is installed and accessible</li>
+                    <li><strong>Permission Denied:</strong> Run <code>chmod +x</code> commands on Mac/Linux</li>
+                    <li><strong>File Not Found:</strong> Ensure you're in the correct repository directory</li>
+                </ul>
+            </div>
+
+            <div class="setup-step">
+                <h3><i class="fa fa-rocket"></i> Next Steps</h3>
+                <ul>
+                    <li><strong>Team Integration:</strong> Share this setup with your development team</li>
+                    <li><strong>CI/CD Pipeline:</strong> Integrate with your continuous integration workflow</li>
+                    <li><strong>Custom Rules:</strong> Tailor analysis rules to your project's specific needs</li>
+                    <li><strong>Monitoring:</strong> Track code quality improvements over time</li>
+                </ul>
+            </div>
+
+            <div class="support-note">
+                <p><i class="fa fa-info-circle"></i> <strong>Need Help?</strong> Check the project documentation or contact support for additional assistance.</p>
+            </div>
+        </div>
+    </div>
+
+    <svg class="bg-waves" width="100%" height="220" viewBox="0 0 1440 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path id="wave1" d="M0,120 Q360,200 720,120 T1440,120 V220 H0 Z" fill="#8ecae6" opacity="0.10">
+        <animate attributeName="d" dur="7s" repeatCount="indefinite"
+          values="M0,120 Q360,200 720,120 T1440,120 V220 H0 Z;
+                  M0,140 Q360,80 720,140 T1440,120 V220 H0 Z;
+                  M0,120 Q360,200 720,120 T1440,120 V220 H0 Z" />
+      </path>
+      <path id="wave2" d="M0,180 Q480,100 960,180 T1440,180 V220 H0 Z" fill="#fb8500" opacity="0.08">
+        <animate attributeName="d" dur="9s" repeatCount="indefinite"
+          values="M0,180 Q480,100 960,180 T1440,180 V220 H0 Z;
+                  M0,200 Q480,220 960,160 T1440,200 V220 H0 Z;
+                  M0,180 Q480,100 960,180 T1440,180 V220 H0 Z" />
+      </path>
+    </svg>
+</body>
+</html>
