@@ -1,7 +1,0 @@
-aws_region         = "us-east-1"
-project_name       = "fyp-cicd"
-container_port     = 80
-health_check_path  = "/"
-task_cpu           = 256
-task_memory        = 512
-service_desired_count = 1
